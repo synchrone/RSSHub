@@ -1,0 +1,18 @@
+{
+    "id": "app.rsshub.cloudron",
+    "title": "RSSHub",
+    "author": "DIYGod <i@diygod.me>",
+    "description": "RSSHub is an open source, easy to use, and extensible RSS feed aggregator, it's capable of generating RSS feeds from pretty much everything.",
+    "tagline": "Everything is RSSible",
+    "version": "0.1.0",
+    "healthCheckPath": "/",
+    "httpPort": 1200,
+    "addons": {},
+    "manifestVersion": 2,
+    "website": "https://rsshub.app/",
+    "documentationUrl": "https://docs.rsshub.app/en/",
+    "contactEmail": "syn+rsshub@syn.im",
+    "icon": "file://lib/favicon.png",
+    "tags": [ "rss", "news" ],
+    "mediaLinks": [ "https://i.imgur.com/MAQYBor.png", "https://i.imgur.com/YpD7L0D.png"]
+}
