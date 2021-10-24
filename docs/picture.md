@@ -8,31 +8,33 @@ pageClass: routes
 
 ### Photos
 
-<Route author="nczitzk" example="/1x/latest/all" path="/1x/:type?/:caty?" :paramsDesc="['排序类型，默认为 `latest`，亦可选 `popular` 或 `curators-choice`', '图片类别，默认为 `all`，见下表']">
+<Route author="nczitzk" example="/1x" path="/1x/:category?" :paramsDesc="['类别，默认为 Latest awarded，见下表']">
 
-| 图片类别       | 代码          |
-| -------------- | ------------- |
-| All categories | all           |
-| Abstract       | abstract      |
-| Action         | action        |
-| Animals        | animals       |
-| Architecture   | architecture  |
-| Conceptual     | conceptual    |
-| Creative edit  | creative-edit |
-| Documentary    | documentary   |
-| Everyday       | everyday      |
-| Fine Art Nude  | fine-art-nude |
-| Humour         | humour        |
-| Landscape      | landscape     |
-| Macro          | macro         |
-| Mood           | mood          |
-| Night          | night         |
-| Performance    | performance   |
-| Portrait       | portrait      |
-| Still life     | still-life    |
-| Street         | street        |
-| Underwater     | underwater    |
-| Wildlife       | wildlife      |
+| Category         | Title         |
+| ---------------- | ------------- |
+| Latest awarded   | latest        |
+| Popular          | popular       |
+| Latest published | published     |
+| Abstract         | abstract      |
+| Action           | action        |
+| Animals          | animals       |
+| Architecture     | architecture  |
+| Conceptual       | conceptual    |
+| Creative edit    | creative-edit |
+| Documentary      | documentary   |
+| Everyday         | everyday      |
+| Fine Art Nude    | fine-art-nude |
+| Humour           | humour        |
+| Landscape        | landscape     |
+| Macro            | macro         |
+| Mood             | mood          |
+| Night            | night         |
+| Performance      | performance   |
+| Portrait         | portrait      |
+| Still life       | still-life    |
+| Street           | street        |
+| Underwater       | underwater    |
+| Wildlife         | wildlife      |
 
 </Route>
 
@@ -45,6 +47,22 @@ pageClass: routes
 ### 分类
 
 <Route author="KotoriK" example="/8kcos/cat/8kasianidol"  path="/8kcos/cat/:cat*" :paramsDesc="['默认值为8kasianidol，将目录页面url中 /category/ 后面的部分填入。如：https://www.8kcosplay.com/category/8kchineseidol/%e9%a3%8e%e4%b9%8b%e9%a2%86%e5%9f%9f/ 对应的RSS页面为/8kcos/cat/8kchineseidol/%e9%a3%8e%e4%b9%8b%e9%a2%86%e5%9f%9f/。']"/>
+
+## BabeHub
+
+### 分类
+
+<Route author="nczitzk" example="/babehub" path="/babehub/:category?" :paramsDesc="['分类，见下表，默认为首页']">
+
+| Home | Most Viewed | Picture Archive | Video Archive |
+| ---- | ----------- | --------------- | ------------- |
+|      | most-viewed | picture         | video         |
+
+</Route>
+
+### 搜索关键字
+
+<Route author="nczitzk" example="/babehub/search/babe" path="/babehub/search/:keyword?" :paramsDesc="['关键字']"/>
 
 ## Bing 壁纸
 
@@ -66,13 +84,57 @@ pageClass: routes
 | ---- | --------- | ------ |
 | hot  | recommend | recent |
 
+## DailyArt 每日艺术
+
+<Route author="zphw" example="/dailyart/zh" path="/dailyart/:language?" :paramsDesc="['语言，支持 en, zh, jp 等，默认为 en']" />
+
 ## Dilbert Comic Strip
 
-<Route name="Daily Strip" author="Maecenas" example="/dilbert/strip" path="/dilbert/strip">
+<Route name="Daily Strip" author="Maecenas" example="/dilbert/strip" path="/dilbert/strip" />
 
 通过提取漫画，提供比官方源更佳的阅读体验。
 
 </Route>
+
+## E-Hentai
+
+### 收藏
+
+<Route author="Howard Yin" example="/ehentai/favorites/0/posted" path="/ehentai/favorites/:favcat?/:order?/:page?/:bittorrent?" :paramsDesc="['收藏夹编号，可选','顺序，可选：posted-按画廊发布时间排序，favorited-按添加收藏的时间排序', '爬获取第多少页的数据', '是否获取种子链接']" anticrawler="1" supportBT="1" />
+
+### 标签
+
+<Route author="Howard Yin" example="/ehentai/tag/language:chinese/1" path="/ehentai/tag/:tag/:page?/:bittorrent?" :paramsDesc="['标签', '爬获取第多少页的数据', '是否获取种子链接']" anticrawler="1" supportBT="1" />
+
+### 搜索
+
+<Route author="Howard Yin" example="/ehentai/search/:params?/:page?" path="/ehentai/search/:params?/:page?/:bittorrent?" :paramsDesc="['用于搜索的关键词。可在原网站搜索后复制 `https://e-hentai.org/?` 后面的内容', '爬获取第多少页的数据', '是否获取种子链接']" anticrawler="1" supportBT="1" />
+
+## Elite Babes
+
+### Home
+
+<Route author="nczitzk" example="/elitebabes" path="/elitebabes/:category?" :paramsDesc="['分类，见下表，默认为 Home']" />
+
+| Home | Hot | Popular | Recent |
+| ---- | --- | ------- | ------ |
+|      | hot | popular | recent |
+
+</Route>
+
+### Videos
+
+<Route author="nczitzk" example="/elitebabes/videos" path="/elitebabes/videos/:sort?" :paramsDesc="['排序，见下表，默认为 Popular']"/>
+
+| Popular | Recent |
+| ------- | ------ |
+| popular | recent |
+
+</Route>
+
+### Search
+
+<Route author="nczitzk" example="/elitebabes/search/pose" path="/elitebabes/search/:keyword?" :paramsDesc="['关键字']"/>
 
 ## Fantia
 
@@ -326,11 +388,15 @@ R18 显示
 
 ### 无聊图
 
-<Route author="Xuanwo xyqfer" example="/jandan/pic" path="/jandan/:sub_model" :paramsDesc="['煎蛋板块名称']"/>
+<Route author="kobemtl Xuanwo xyqfer 9uanhuo" example="/jandan/pic" path="/jandan/:sub_model" :paramsDesc="['煎蛋板块名称']"/>
 
-| 无聊图 | 无聊图热榜 | 4 小时热榜 |
-| ------ | ---------- | ---------- |
-| pic    | top        | top-4h     |
+| 无聊图 | 无聊图热榜 | 4 小时热榜 | 女装 | 随手拍 | 随手拍热榜 | 动物园 |
+| ------ | ---------- | ---------- | ---- | ------ | ---------- | ------ |
+| pic    | top        | top-4h     | girl | ooxx   | top-ooxx   | zoo    |
+
+### 首页
+
+<Route author="lonelykid" example="/jandan/article" path="/jandan/article"/>
 
 ## 绝对领域
 
@@ -354,6 +420,8 @@ R18 显示
 
 ::: tip 提示
 
+留园网文档参见 [此处](https://docs.rsshub.app/new-media.html#liu-yuan-wang)
+
 禁忌书屋文档参见 [此处](https://docs.rsshub.app/reading.html#jin-ji-shu-wu)
 
 :::
@@ -367,14 +435,6 @@ R18 显示
 ### 搜索关键字
 
 <Route author="nczitzk" example="/cool18/bbs/keywords/都市" path="/cool18/:id/keywords/:keyword?" :paramsDesc="['分站，见上表，默认为禁忌书屋', '关键字']"/>
-
-### 妹子图
-
-<Route author="kobemtl xyqfer" example="/jandan/ooxx" path="/jandan/:sub_model" :paramsDesc="['煎蛋板块名称']"/>
-
-| 妹子图 | 妹子图热榜 |
-| ------ | ---------- |
-| ooxx   | top-ooxx   |
 
 ## 妹子图
 
