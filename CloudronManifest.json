@@ -13,6 +13,6 @@
     "documentationUrl": "https://docs.rsshub.app/en/",
     "contactEmail": "syn+rsshub@syn.im",
     "icon": "file://lib/favicon.png",
-    "tags": [ "rss", "news" ],
-    "mediaLinks": [ "https://i.imgur.com/MAQYBor.png", "https://i.imgur.com/YpD7L0D.png"]
+    "tags": ["rss", "news"],
+    "mediaLinks": ["https://i.imgur.com/MAQYBor.png", "https://i.imgur.com/YpD7L0D.png"]
 }
