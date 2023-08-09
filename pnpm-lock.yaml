@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@koa/router':
     specifier: 12.0.0
@@ -180,7 +184,7 @@ dependencies:
     version: 0.7.4
   telegram:
     specifier: ^2.17.10
-    version: 2.17.10
+    version: 2.18.24
   tiny-async-pool:
     specifier: 2.1.0
     version: 2.1.0
@@ -1114,7 +1118,7 @@ packages:
       '@babel/runtime-corejs2': 7.21.0
       '@postlight/ci-failed-test-reporter': 1.0.26
       cheerio: 0.22.0
-      difflib: github.com/postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed
+      difflib: git@github.com+postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed
       ellipsize: 0.1.0
       iconv-lite: 0.5.0
       moment: 2.29.4
@@ -7621,8 +7625,8 @@ packages:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  /telegram@2.17.10:
-    resolution: {integrity: sha512-BeWrH6jrTjtmZtGi63mM2UWwciOivqQknhRIysULVRQkDbo+MW4I2jI6d3sPM5m8Ge9mhjeKg1aVZf2qG4vh2Q==}
+  /telegram@2.18.24:
+    resolution: {integrity: sha512-yqA2jPThg2Wq31tJ1vqi+XILHqZ8DZy/XiEiHiJ9fZGtNHfjvlFLCWvJyBUL4cRSClXi1r4dFV/DrXqyI/eLqA==}
     dependencies:
       '@cryptography/aes': 0.1.1
       async-mutex: 0.3.2
@@ -8379,8 +8383,8 @@ packages:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: true
 
-  github.com/postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed:
-    resolution: {tarball: https://codeload.github.com/postlight/difflib.js/tar.gz/32e8e38c7fcd935241b9baab71bb432fd9b166ed}
+  git@github.com+postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed:
+    resolution: {commit: 32e8e38c7fcd935241b9baab71bb432fd9b166ed, repo: git@github.com:postlight/difflib.js.git, type: git}
     name: difflib
     version: 0.2.6
     dependencies:
